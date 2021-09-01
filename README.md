@@ -3,7 +3,7 @@
 ## Installation Guide
 
 - Clone the repo to your local machine using the following command(SSH Clone)
--- $ git clone git@github.com:raghugjoshi/rps_game.git`
+ - $ git clone git@github.com:raghugjoshi/rps_game.git`
 
 - In the application's root folder run the following command
 - `$ bundle install`
