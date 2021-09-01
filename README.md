@@ -22,4 +22,4 @@
   - Your Move
   - Server Move
   - Outcome
-- It also contains a link to **home** page to play the once more.
+- It also contains a link to **home** page to play the game once more.
