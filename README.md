@@ -3,15 +3,15 @@
 ##Installation Guide
 
 - Clone the repo to your local machine using the following command(SSH Clone)
-`$ git clone git@github.com:raghugjoshi/rps_game.git`
+ -`$ git clone git@github.com:raghugjoshi/rps_game.git`
 
 - In the application's root folder run the following command
-`$ bundle install`
+ -`$ bundle install`
 
 - There is no database associated with this application. Hence, there is no need of database migration
 
 - Run the rails server in the application root directory
-`$ rails server`
+ -`$ rails server`
 - Web application can be accessed in the browser using the following URL
 [http://localhost:3000](http://localhost:3000/)
 
