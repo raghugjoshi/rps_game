@@ -1,42 +1,42 @@
 class RockPaperScissors
-	attr_accessor :player_choice, :server_choice, :result
+  attr_accessor :player_choice, :server_choice, :result
 
-	def initialize(player_choice)
-		@player_choice = player_choice
-		@server_choice = @result = ''
-	end
+  def initialize(player_choice)
+    @player_choice = player_choice
+    @server_choice = @result = ''
+  end
 
-	def play
-		if is_valid_choice?(player_choice)
-			@server_choice = ConfigCenter::GAME_CHOICES.sample
-			@result = play_game([player_choice, server_choice])
-			{ success: true, message: compute_message, data: { result: @result.split('-').join(' ').titleize, player_move: player_choice.titleize, server_move: server_choice.titleize } }
-		else
-			{ success: false, message: 'Invalid choice. Options should be eiether Rock, Paper or Scissors. Please try again', data: nil }
-		end
-	end
+  def play
+    if is_valid_choice?(player_choice)
+      @server_choice = ConfigCenter::GAME_CHOICES.sample
+      @result = play_game([player_choice, server_choice])
+      { success: true, message: compute_message, data: { result: @result.split('-').join(' ').titleize, player_move: player_choice.titleize, server_move: server_choice.titleize } }
+    else
+      { success: false, message: 'Invalid choice. Options should be eiether Rock, Paper or Scissors. Please try again', data: nil }
+    end
+  end
 
-	private
+  private
 
-	def play_game(move)
-		return ConfigCenter::PLAYER_WON if ConfigCenter::WINNER.include?(move)
-		return ConfigCenter::SERVER_WON if ConfigCenter::LOOSER.include?(move)
-		ConfigCenter::TIE
-	end
+  def play_game(move)
+    return ConfigCenter::PLAYER_WON if ConfigCenter::WINNER.include?(move)
+    return ConfigCenter::SERVER_WON if ConfigCenter::LOOSER.include?(move)
+    ConfigCenter::TIE
+  end
 
-	def is_valid_choice?(player_choice)
-		ConfigCenter::GAME_CHOICES.include?(@player_choice.to_s)
-	end
+  def is_valid_choice?(player_choice)
+    ConfigCenter::GAME_CHOICES.include?(@player_choice.to_s)
+  end
 
-	def compute_message
-		case @result
-		when ConfigCenter::PLAYER_WON
-			'Wow!! You Won. Congratulations.'
-		when ConfigCenter::SERVER_WON
-			"Oh!! Server won this time. Don't worry. Better luck next time."
-		else
-			"Oh!!. There is a Tie!!. Try again. All the best."
-		end
-	end
+  def compute_message
+    case @result
+    when ConfigCenter::PLAYER_WON
+      'Wow!! You Won. Congratulations.'
+    when ConfigCenter::SERVER_WON
+      "Oh!! Server won this time. Don't worry. Better luck next time."
+    else
+      "Oh!!. There is a Tie!!. Try again. All the best."
+    end
+  end
 
 end
