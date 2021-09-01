@@ -7,6 +7,8 @@
 
 - In the application's root folder run the following command
   - `$ bundle install`
+- Please run the following command to setup cache in local environment
+  - `$ rails dev:cache` 
 
 - There is no database associated with this application. Hence, there is no need of database migration
 
