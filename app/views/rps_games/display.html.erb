@@ -6,7 +6,7 @@
           <% if Rails.cache.read('success') == true %>
             <p><strong><%= Rails.cache.read('message') %></strong></p>
             <p><%= "Your move - "%> <strong><%= Rails.cache.read('player-move') %></strong></p>
-            <p><%= "Server move "%> <strong><%= Rails.cache.read('server-move') %></strong></p>
+            <p><%= "Server move - "%> <strong><%= Rails.cache.read('server-move') %></strong></p>
             <p><%= "Outcome - "%><strong><%= Rails.cache.read('result') %></strong></p>
           <% else %>
               <p><strong><%= Rails.cache.read('message') %></strong></p>
