@@ -3,13 +3,13 @@
     <div class="col-sm-12">
       <div class="center-main"> 
         <div>
-          <% if params[:success] == true.to_s %>
-            <p><strong><%= params[:message] %></strong></p>
-            <p><%= "Your move - "%> <strong><%= params['player-move'] %></strong></p>
-            <p><%= "Server move "%> <strong><%= params['server-move'] %></strong></p>
-            <p><%= "Outcome - "%><strong><%= params[:result] %></strong></p>
+          <% if Rails.cache.read('success') == true %>
+            <p><strong><%= Rails.cache.read('message') %></strong></p>
+            <p><%= "Your move - "%> <strong><%= Rails.cache.read('player-move') %></strong></p>
+            <p><%= "Server move "%> <strong><%= Rails.cache.read('server-move') %></strong></p>
+            <p><%= "Outcome - "%><strong><%= Rails.cache.read('result') %></strong></p>
           <% else %>
-              <p><strong><%= params[:message] %></strong></p>
+              <p><strong><%= Rails.cache.read('message') %></strong></p>
           <% end %>
           <p><strong><%= link_to 'Home', root_path %></p></strong>
         </div>
