@@ -10,9 +10,9 @@ class RockPaperScissors
 		if is_valid_choice?(player_choice)
 			@server_choice = ConfigCenter::GAME_CHOICES.sample
 			@result = play_game([player_choice, server_choice])
-			{ success: true, messages: compute_message, data: { result: @result, player_move: player_choice, server_move: server_choice } }
+			{ success: true, message: compute_message, data: { result: @result.split('-').join(' ').titleize, player_move: player_choice.titleize, server_move: server_choice.titleize } }
 		else
-			{success: false, messages: ['Invalid choice. Options should be eiether Rock, Paper or Scissors. Please try again'], data: { player_move: player_choice } }
+			{ success: false, message: 'Invalid choice. Options should be eiether Rock, Paper or Scissors. Please try again', data: nil }
 		end
 	end
 
