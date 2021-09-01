@@ -15,7 +15,7 @@
 - Web application can be accessed in the browser using the following URL
 [http://localhost:3000](http://localhost:3000/)
 
-##How to play?
+## How to play?
 - Home page contains a **Selection Dropdown** and a **Play button**.
 - Select any one of the options and click on Play button. Once clicked, you will be redirected to the game result page containg following information.
 
