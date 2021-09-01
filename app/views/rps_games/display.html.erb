@@ -1,0 +1,21 @@
+<div class="container min-height-container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="center-main"> 
+        <div>
+        	<% if params[:success] == true.to_s %>
+            <p><strong><%= params[:message] %></strong></p>
+            <p><%= "Your move - "%> <strong><%= params['player-move'] %></strong></p>
+            <p><%= "Server move "%> <strong><%= params['server-move'] %></strong></p>
+            <p><%= "Outcome - "%><strong><%= params[:result] %></strong></p>
+          <% else %>
+          	  <p><strong><%= params[:message] %></strong></p>
+          <% end %>
+          <p><strong><%= link_to 'Home', root_path %></p></strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
