@@ -76,3 +76,11 @@
   resize: both;
   overflow: auto;
 }
+
+#heading-text {
+  font-size: 20px;
+  text-align: center;
+  margin: auto;
+  font-weight: bold;
+  line-height: 44px;
+}
