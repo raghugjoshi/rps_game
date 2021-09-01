@@ -18,9 +18,8 @@
 ## How to play?
 - Home page contains a **Selection Dropdown** and a **Play button**.
 - Select any one of the options and click on Play button. Once clicked, you will be redirected to the game result page containg following information.
-
- - Status message
- - Your Move
- - Server Move
- - Outcome
+  - Status message
+  - Your Move
+  - Server Move
+  - Outcome
 - It also contains a link to **home** page to play the once more.
