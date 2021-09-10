@@ -1,5 +1,5 @@
 module ConfigCenter
-  GAME_CHOICES = ['paper', 'rock','scissors'].freeze
+  GAME_CHOICES = ['paper', 'rock','scissors']
 
   # Pairs representing winner. The first entry in each pair represent Human Player and second one Server move
   WINNER = [
