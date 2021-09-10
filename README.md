@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation Guide
 
-Things you may want to cover:
+- Clone the repo to your local machine using the following command(SSH Clone)
+  - `$ git clone git@github.com:raghugjoshi/rps_game.git`
 
-* Ruby version
+- In the application's root folder run the following command
+  - `$ bundle install`
+- Please run the following command to setup cache in local environment
+  - `$ rails dev:cache` 
 
-* System dependencies
+- There is no database associated with this application. Hence, there is no need of database migration
 
-* Configuration
+- Run the rails server in the application root directory
+  - `$ rails server`
+- Web application can be accessed in the browser using the following URL
+  - [http://localhost:3000](http://localhost:3000/)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## How to play?
+- Home page contains a **Selection Dropdown** and a **Play button**.
+- Select any one of the options and click on Play button. Once clicked, you will be redirected to the game result page containg following information.
+  - Status message
+  - Your Move
+  - Server Move
+  - Outcome
+- It also contains a link to **home** page to play the game once more.

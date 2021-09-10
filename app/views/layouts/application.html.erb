@@ -8,9 +8,17 @@
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
+    <%= javascript_pack_tag 'custom' %>
   </head>
 
   <body>
+    <div class='container'>
+      <%= render 'layouts/flash_message' %>
+    </div>
+    <div class='header'>
+      <div id='heading-text'>Welcome to the Rock, Paper and Scissors Game</div>
+    </div>
     <%= yield %>
+    <div class='footer'></div>
   </body>
 </html>

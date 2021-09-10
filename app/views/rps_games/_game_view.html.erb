@@ -1,0 +1,25 @@
+<div class="container min-height-container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="center-main"> 
+        <div>
+          <%= form_tag(rps_games_path, 
+            :method => 'POST',
+            :class => 'form-horizontal', 
+            :remote => false) do |f| %>
+
+            <div class='col-sm-2'>
+              <%= select_tag 'player_choice', options_for_select(ConfigCenter::GAME_CHOICES.map {|option|[option.titleize, option] }),
+              :prompt => 'Select an option...', 
+              :class => 'form-select form-select-sm' 
+              %>
+            </div>
+            <div class='col-sm-2'>
+              <button type="submit" class="btn btn btn-success">Play</button>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
